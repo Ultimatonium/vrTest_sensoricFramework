@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace SensoricFramework
@@ -14,6 +15,6 @@ namespace SensoricFramework
         /// defines the tactile positions on the hardware normalized between (0,0) and (1,1)
         /// </summary>
         [SerializeField]
-        public Vector2[] positions;
+        public List<Vector2> positions;
     }
 }

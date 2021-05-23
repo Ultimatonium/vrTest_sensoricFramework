@@ -133,9 +133,9 @@ namespace SensoricFramework
             else
             {
                 List<PathPoint> dots = new List<PathPoint>();
-                for (int i = 0; i < e.tactile.positions.Length; i++)
+                for (int i = 0; i < e.tactile.positions.Count; i++)
                 {
-                    dots.Add(new PathPoint(e.tactile.positions[i].x, e.tactile.positions[i].y, (int)(e.sensoric.intensity * 100), e.tactile.positions.Length));
+                    dots.Add(new PathPoint(e.tactile.positions[i].x, e.tactile.positions[i].y, (int)(e.sensoric.intensity * 100), e.tactile.positions.Count));
                 }
                 int durationMillis = (int)(e.sensoric.duration * 1000);
                 e.sensoric.id += e.position; //fix for possible bHaptics bug

@@ -90,7 +90,7 @@ namespace SensoricFramework
         /// <param name="e"><see cref="PlayTactileEventArgs"/></param>
         public void OnPlayTactile(SensoricSender sender, PlayTactileEventArgs e)
         {
-            PlayTactile(sender, e);
+            PlayTactile?.Invoke(sender, e);
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace SensoricFramework
         /// <param name="e"><see cref="PlayThermalEventArgs"/></param>
         public void OnPlayThermal(SensoricSender sender, PlayThermalEventArgs e)
         {
-            PlayThermal(sender, e);
+            PlayThermal?.Invoke(sender, e);
         }
 
         /// <summary>
@@ -110,7 +110,7 @@ namespace SensoricFramework
         /// <param name="e"><see cref="PlayOlfactoryEventArgs"/></param>
         public void OnPlayOlfactory(SensoricSender sender, PlayOlfactoryEventArgs e)
         {
-            PlayOlfactory(sender, e);
+            PlayOlfactory?.Invoke(sender, e);
         }
 
         /// <summary>

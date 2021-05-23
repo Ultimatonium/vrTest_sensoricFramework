@@ -22,7 +22,7 @@ namespace SensoricFramework
         /// <param name="collisionPoint"><see cref="Vector3"/>worldspace position where the Collider got hit</param>
         protected override void Play(PositionEnum position, Vector3 collisionPoint, Collider other)
         {
-            AddCollisionPoint(collisionPoint, other);
+            ReplaceWithCollisionPoint(collisionPoint, other);
             SensoricManager.Instance.OnPlayTactile(this, new BHapticsEventArgs { position = position, sensoric = sensoricStruct, tactile = tactileStruct, hapticClip = bHapticClip });
         }
     }
