@@ -3,7 +3,7 @@ namespace SensoricFramework
     /// <summary>
     /// enum which defines how often something happens
     /// </summary>
-    public enum ExecutionAmountEnum
+    public enum ExecutionAmount
     {
         NONE,
         Once,

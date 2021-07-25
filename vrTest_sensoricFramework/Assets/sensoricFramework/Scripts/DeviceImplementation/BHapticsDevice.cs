@@ -92,7 +92,7 @@ namespace SensoricFramework
         private void PlayThermal(object sender, PlayThermalEventArgs e)
         {
             int dotIntensity = (int)(e.sensoric.intensity * 100 / 2);
-            if (e.thermal.thermal == ThermalEnum.hot)
+            if (e.thermal.thermal == Thermal.hot)
             {
                 dotIntensity += 50;
             }
@@ -100,11 +100,11 @@ namespace SensoricFramework
             e.sensoric.id += e.position; //fix for possible bHaptics bug
             switch (e.position)
             {
-                case PositionEnum.LeftHand:
+                case Position.LeftHand:
                     SetGloveIntensity(dotIntensity);
                     BhapticsManager.GetHaptic().Submit(e.sensoric.id, PositionType.HandL, glovePoint, durationMillis);
                     break;
-                case PositionEnum.RightHand:
+                case Position.RightHand:
                     SetGloveIntensity(dotIntensity);
                     BhapticsManager.GetHaptic().Submit(e.sensoric.id, PositionType.HandR, glovePoint, durationMillis);
                     break;
@@ -141,31 +141,31 @@ namespace SensoricFramework
                 e.sensoric.id += e.position; //fix for possible bHaptics bug
                 switch (e.position)
                 {
-                    case PositionEnum.Head:
+                    case Position.Head:
                         BhapticsManager.GetHaptic().Submit(e.sensoric.id, PositionType.Head, dots, durationMillis);
                         break;
-                    case PositionEnum.LeftArm:
+                    case Position.LeftArm:
                         BhapticsManager.GetHaptic().Submit(e.sensoric.id, PositionType.ForearmL, dots, durationMillis);
                         break;
-                    case PositionEnum.RightArm:
+                    case Position.RightArm:
                         BhapticsManager.GetHaptic().Submit(e.sensoric.id, PositionType.ForearmR, dots, durationMillis);
                         break;
-                    case PositionEnum.LeftHand:
+                    case Position.LeftHand:
                         BhapticsManager.GetHaptic().Submit(e.sensoric.id, PositionType.HandL, dots, durationMillis);
                         break;
-                    case PositionEnum.RightHand:
+                    case Position.RightHand:
                         BhapticsManager.GetHaptic().Submit(e.sensoric.id.ToString(), PositionType.HandR, dots, durationMillis);
                         break;
-                    case PositionEnum.LeftFoot:
+                    case Position.LeftFoot:
                         BhapticsManager.GetHaptic().Submit(e.sensoric.id.ToString(), PositionType.FootL, dots, durationMillis);
                         break;
-                    case PositionEnum.RightFoot:
+                    case Position.RightFoot:
                         BhapticsManager.GetHaptic().Submit(e.sensoric.id, PositionType.FootR, dots, durationMillis);
                         break;
-                    case PositionEnum.ChestFront:
+                    case Position.ChestFront:
                         BhapticsManager.GetHaptic().Submit(e.sensoric.id, PositionType.VestFront, dots, durationMillis);
                         break;
-                    case PositionEnum.ChestBack:
+                    case Position.ChestBack:
                         BhapticsManager.GetHaptic().Submit(e.sensoric.id, PositionType.VestBack, dots, durationMillis);
                         break;
                     default:

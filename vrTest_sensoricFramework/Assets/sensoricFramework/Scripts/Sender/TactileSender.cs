@@ -13,7 +13,7 @@ namespace SensoricFramework
         /// struct which holds all tactile information
         /// </summary>
         [SerializeField]
-        public TactileStruct tactileStruct;
+        public TactileData tactileStruct;
         /// <summary>
         /// <c>[SerializeField]</c>
         /// bool which tells if an collision point as to be added to the <see cref="tactileStruct"/>
@@ -27,7 +27,7 @@ namespace SensoricFramework
         /// <param name="position">defines which body party got hit</param>
         /// <param name="collisionPoint"><see cref="Vector3"/>worldspace position where the Collider got hit</param>
         /// <param name="other">the collider of the other gameObject</param>
-        protected override void Play(PositionEnum position, Vector3 collisionPoint, Collider other)
+        protected override void Play(Position position, Vector3 collisionPoint, Collider other)
         {
             ReplaceWithCollisionPoint(collisionPoint, other);
             SensoricManager.Instance.OnPlayTactile(this, new PlayTactileEventArgs { position = position, sensoric = sensoricStruct, tactile = tactileStruct}); 
@@ -36,10 +36,10 @@ namespace SensoricFramework
         /// <summary>
         /// set type of sensoric
         /// </summary>
-        /// <returns><see cref="SensoricEnum"/></returns>
-        protected override SensoricEnum SetSensoricType()
+        /// <returns><see cref="SensoricType"/></returns>
+        protected override SensoricType SetSensoricType()
         {
-            return SensoricEnum.tactile;
+            return SensoricType.tactile;
         }
 
         /// <summary>

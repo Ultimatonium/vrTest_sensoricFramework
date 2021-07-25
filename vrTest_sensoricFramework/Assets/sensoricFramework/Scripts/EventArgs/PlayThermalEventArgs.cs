@@ -10,6 +10,6 @@ namespace SensoricFramework
         /// <summary>
         /// struct which holds all thermal information
         /// </summary>
-        public ThermalStruct thermal;
+        public ThermalData thermal;
     }
 }

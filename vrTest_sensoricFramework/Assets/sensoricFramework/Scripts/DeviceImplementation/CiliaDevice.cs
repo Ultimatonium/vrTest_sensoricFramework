@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using UnityEditor;
 using UnityEngine;
 
 namespace SensoricFramework
@@ -28,7 +27,22 @@ namespace SensoricFramework
         /// </summary>
         public const int ciliaSlots = 6;
 
+        /// <summary>
+        /// Name of the Cilia Tag
+        /// </summary>
         private const string ciliaTag = "Cilia";
+
+        /// <summary>
+        /// delegate for TagManager.TagExist
+        /// </summary>
+        /// <seealso cref="TagManager"/>
+        public delegate bool TagExist(string tag);
+
+        /// <summary>
+        /// get set by TagManager.Init
+        /// </summary>
+        /// <seealso cref="TagManager"/>
+        public static TagExist OnTagExist;
 
         /// <summary>
         /// Unity-Message
@@ -44,18 +58,7 @@ namespace SensoricFramework
             }
 
             //validate Clilia tag
-            bool ciliaTagFound = false;
-            UnityEngine.Object tagManager = AssetDatabase.LoadMainAssetAtPath("ProjectSettings/TagManager.asset");
-            SerializedObject serializedTagManager = new SerializedObject(tagManager);
-            SerializedProperty serializedProperty = serializedTagManager.FindProperty("tags");
-            for (int i = 0; i < serializedProperty.arraySize; i++)
-            {
-                if (serializedProperty.GetArrayElementAtIndex(i).stringValue == ciliaTag)
-                {
-                    ciliaTagFound = true;
-                }
-            }
-            if (!ciliaTagFound)
+            if (OnTagExist != null && !OnTagExist(ciliaTag))
             {
                 Debug.LogError("missing tag: " + ciliaTag);
             }
@@ -78,7 +81,10 @@ namespace SensoricFramework
                 SetCiliaDefaultLight();
                 cilia.PathToCiliaPluginScripts = "Assets/sensoricFramework/Plugins/CiliaPlugin/Scripts/";
                 ciliaObject.SetActive(true);
-                cilia.AddSmellsList();
+                if (Application.isEditor)
+                {
+                    cilia.AddSmellsList();
+                }
                 cilia.Initialize();
             }
             else

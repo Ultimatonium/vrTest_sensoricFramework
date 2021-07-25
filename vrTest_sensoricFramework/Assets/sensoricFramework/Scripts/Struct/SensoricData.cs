@@ -7,7 +7,7 @@ namespace SensoricFramework
     /// Holds all general sensoric information
     /// </summary>
     [System.Serializable]
-    public struct SensoricStruct
+    public struct SensoricData
     {
         /// <summary>
         /// id which is unique per sender.
@@ -19,7 +19,7 @@ namespace SensoricFramework
         /// defines the sensoric type
         /// </summary>
         [HideInInspector]
-        public SensoricEnum sensoric;
+        public SensoricType sensoric;
         /// <summary>
         /// <c>[SerializeField]</c>
         /// defines the intensity. normalized between 0 and 1 (inclusive)
@@ -38,6 +38,6 @@ namespace SensoricFramework
         /// defines how often executed
         /// </summary>
         [SerializeField]
-        public ExecutionAmountEnum executionAmount;
+        public ExecutionAmount executionAmount;
     }
 }

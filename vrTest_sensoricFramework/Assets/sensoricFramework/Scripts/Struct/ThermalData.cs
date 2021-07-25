@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace SensoricFramework
@@ -8,13 +7,13 @@ namespace SensoricFramework
     /// Holds all tactile information
     /// </summary>
     [System.Serializable]
-    public struct TactileStruct
+    public struct ThermalData
     {
         /// <summary>
         /// <c>[SerializeField]</c>
-        /// defines the tactile positions on the hardware normalized between (0,0) and (1,1)
+        /// defines the thermal state
         /// </summary>
         [SerializeField]
-        public List<Vector2> positions;
+        public Thermal thermal;
     }
 }

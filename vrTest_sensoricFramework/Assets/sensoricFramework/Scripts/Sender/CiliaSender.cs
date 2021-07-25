@@ -12,20 +12,20 @@ namespace SensoricFramework
         /// defines what the cilia light color should be set to
         /// </summary>
         [SerializeField]
-        public Neopixel[] light = new Neopixel[CiliaDevice.ciliaSlots];
+        public Neopixel[] lightColor = new Neopixel[CiliaDevice.ciliaSlots];
         /// <summary>
         /// <c>[SerializeField]</c>
-        /// defines if <see cref="light"/> has to be applied
+        /// defines if <see cref="lightColor"/> has to be applied
         /// </summary>
         [SerializeField]
         public bool[] setLight = new bool[CiliaDevice.ciliaSlots];
 
         /// <summary>
-        /// Validates if <see cref="light"/> and <see cref="setLight"/> still has the size of <see cref="ciliaSlots"/> as it's an <c>[SerializeField]</c> and could be changed in inspector
+        /// Validates if <see cref="lightColor"/> and <see cref="setLight"/> still has the size of <see cref="ciliaSlots"/> as it's an <c>[SerializeField]</c> and could be changed in inspector
         /// </summary>
         private void OnValidate()
         {
-            if (light.Length != CiliaDevice.ciliaSlots)
+            if (lightColor.Length != CiliaDevice.ciliaSlots)
             {
                 Debug.LogError("amount of light has to be " + CiliaDevice.ciliaSlots);
             }
@@ -40,9 +40,10 @@ namespace SensoricFramework
         /// </summary>
         /// <param name="position">defines which body party got hit</param>
         /// <param name="collisionPoint"><see cref="Vector3"/>not used</param>
-        protected override void Play(PositionEnum position, Vector3 collisionPoint, Collider other)
+        /// <param name="other"><see cref="TactileSender"/>t</param>
+        protected override void Play(Position position, Vector3 collisionPoint, Collider other)
         {
-            SensoricManager.Instance.OnPlayOlfactory(this, new CiliaEventArgs { position = position, sensoric = sensoricStruct, olfactory = olfactoryStruct, light = light, setLight = setLight });
+            SensoricManager.Instance.OnPlayOlfactory(this, new CiliaEventArgs { position = position, sensoric = sensoricStruct, olfactory = olfactoryStruct, light = lightColor, setLight = setLight });
         }
 
         

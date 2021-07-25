@@ -14,7 +14,7 @@ namespace SensoricFramework
         /// struct which holds all general sensoric informations
         /// </summary>
         [SerializeField]
-        public SensoricStruct sensoricStruct;
+        public SensoricData sensoricStruct;
 
         protected readonly static Vector3 invalidVector3 = new Vector3(float.MinValue, float.MinValue, float.MinValue);
 
@@ -30,34 +30,34 @@ namespace SensoricFramework
 
         /// <summary>
         /// Unity-Message
-        /// calls <see cref="CollisionHandler"/> after collision got triggered if <see cref="ExecutionAmountEnum.Once"/>
+        /// calls <see cref="CollisionHandler"/> after collision got triggered if <see cref="ExecutionAmount.Once"/>
         /// </summary>
         /// <param name="collision"><see cref="Collision"/></param>
         private void OnCollisionEnter(Collision collision)
         {
-            if (sensoricStruct.executionAmount != ExecutionAmountEnum.Once) return;
+            if (sensoricStruct.executionAmount != ExecutionAmount.Once) return;
             CollisionHandler(collision.gameObject, collision.GetContact(0).point, collision.collider);
         }
 
         /// <summary>
         /// Unity-Message
-        /// calls <see cref="CollisionHandler"/> after collision got triggered if <see cref="ExecutionAmountEnum.Ongoing"/>
+        /// calls <see cref="CollisionHandler"/> after collision got triggered if <see cref="ExecutionAmount.Ongoing"/>
         /// </summary>
         /// <param name="collision"><see cref="Collision"/></param>
         private void OnCollisionStay(Collision collision)
         {
-            if (sensoricStruct.executionAmount != ExecutionAmountEnum.Ongoing) return;
+            if (sensoricStruct.executionAmount != ExecutionAmount.Ongoing) return;
             CollisionHandler(collision.gameObject, collision.GetContact(0).point, collision.collider);
         }
 
         /// <summary>
         /// Unity-Message
-        /// calls <see cref="CollisionHandler"/> after collision got triggered if <see cref="ExecutionAmountEnum.Ongoing"/> with intensity=0 
+        /// calls <see cref="CollisionHandler"/> after collision got triggered if <see cref="ExecutionAmount.Ongoing"/> with intensity=0 
         /// </summary>
         /// <param name="collision"><see cref="Collision"/></param>
         private void OnCollisionExit(Collision collision)
         {
-            if (sensoricStruct.executionAmount != ExecutionAmountEnum.Ongoing) return;
+            if (sensoricStruct.executionAmount != ExecutionAmount.Ongoing) return;
             float intensityBackup = sensoricStruct.intensity;
             sensoricStruct.intensity = 0;
             CollisionHandler(collision.gameObject, invalidVector3, collision.collider);
@@ -65,13 +65,13 @@ namespace SensoricFramework
         }
 
         /// <summary>
-        /// calls <see cref="CollisionHandler"/> after trigger got triggered if <see cref="ExecutionAmountEnum.Once"/>.
+        /// calls <see cref="CollisionHandler"/> after trigger got triggered if <see cref="ExecutionAmount.Once"/>.
         /// determins the point where the trigger got hit with an raycast
         /// </summary>
         /// <param name="other"><see cref="Collider"/></param>
         private void OnTriggerEnter(Collider other)
         {
-            if (sensoricStruct.executionAmount != ExecutionAmountEnum.Once) return;
+            if (sensoricStruct.executionAmount != ExecutionAmount.Once) return;
             Rigidbody rigidbody = other.gameObject.GetComponentInParent<Rigidbody>();
             if (rigidbody != null)
             {
@@ -80,13 +80,13 @@ namespace SensoricFramework
         }
 
         /// <summary>
-        /// calls <see cref="CollisionHandler"/> after trigger got triggered if <see cref="ExecutionAmountEnum.Ongoing"/>.
+        /// calls <see cref="CollisionHandler"/> after trigger got triggered if <see cref="ExecutionAmount.Ongoing"/>.
         /// determins the point where the trigger got hit with an raycast
         /// </summary>
         /// <param name="other"><see cref="Collider"/></param>
         private void OnTriggerStay(Collider other)
         {
-            if (sensoricStruct.executionAmount != ExecutionAmountEnum.Ongoing) return;
+            if (sensoricStruct.executionAmount != ExecutionAmount.Ongoing) return;
             Rigidbody rigidbody = other.gameObject.GetComponentInParent<Rigidbody>();
             if (rigidbody != null)
             {
@@ -95,13 +95,13 @@ namespace SensoricFramework
         }
 
         /// <summary>
-        /// calls <see cref="CollisionHandler"/> after trigger got triggered if <see cref="ExecutionAmountEnum.Ongoing"/> with intensity=0.
+        /// calls <see cref="CollisionHandler"/> after trigger got triggered if <see cref="ExecutionAmount.Ongoing"/> with intensity=0.
         /// determins the point where the trigger got hit with an raycast
         /// </summary>
         /// <param name="other"><see cref="Collider"/></param>
         private void OnTriggerExit(Collider other)
         {
-            if (sensoricStruct.executionAmount != ExecutionAmountEnum.Ongoing) return;
+            if (sensoricStruct.executionAmount != ExecutionAmount.Ongoing) return;
             float intensityBackup = sensoricStruct.intensity;
             sensoricStruct.intensity = 0;
             Rigidbody rigidbody = other.gameObject.GetComponentInParent<Rigidbody>();
@@ -131,6 +131,7 @@ namespace SensoricFramework
         /// </summary>
         /// <param name="gameObject"><see cref="GameObject"/> of the other collider</param>
         /// <param name="collisionPoint"><see cref="Vector3"/> worldspace position where the Collider got hit</param>
+        /// <param name="other">the collider of the other gameObject</param>
         protected void CollisionHandler(GameObject gameObject, Vector3 collisionPoint, Collider other)
         {
             SensoricReceiver[] sensoricReceivers = gameObject.GetComponentsInChildren<SensoricReceiver>();
@@ -157,13 +158,14 @@ namespace SensoricFramework
         /// </summary>
         /// <param name="position">defines which body party got hit</param>
         /// <param name="collisionPoint"><see cref="Vector3"/> worldspace position where the Collider got hit</param>
-        protected abstract void Play(PositionEnum position, Vector3 collisionPoint, Collider other);
+        /// <param name="other">the collider of the other gameObject</param>
+        protected abstract void Play(Position position, Vector3 collisionPoint, Collider other);
 
         /// <summary>
         /// has to be implemented to set the sensoric type of this sender
         /// </summary>
-        /// <returns><see cref="SensoricEnum"/></returns>
-        protected abstract SensoricEnum SetSensoricType();
+        /// <returns><see cref="SensoricType"/></returns>
+        protected abstract SensoricType SetSensoricType();
 
         /// <summary>
         /// determins the point where the trigger got hit with an raycast

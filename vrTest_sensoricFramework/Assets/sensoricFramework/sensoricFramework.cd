@@ -1,199 +1,206 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="SensoricFramework.BHapticsDevice">
-    <Position X="27" Y="15" Width="4" />
+    <Position X="68.75" Y="9" Width="4" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAQBAAAEAAAAAAAAAAgAAAAAEiEAAAAA=</HashCode>
       <FileName>Assets\sensoricFramework\Scripts\DeviceImplementation\BHapticsDevice.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SensoricFramework.CiliaDevice">
-    <Position X="31.75" Y="15" Width="7.25" />
+    <Position X="73.5" Y="9" Width="7.25" />
+    <NestedTypes>
+      <Delegate Name="SensoricFramework.CiliaDevice.TagExist" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\sensoricFramework\Scripts\DeviceImplementation\CiliaDevice.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAIACACAgFAQBEAAEAAAAAAAAAAAEAAAAECAAAACA=</HashCode>
+      <HashCode>AAAAIACACAgFAQBEAAEAAAAAAAABAAEAAAAECAAAACA=</HashCode>
       <FileName>Assets\sensoricFramework\Scripts\DeviceImplementation\CiliaDevice.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SensoricFramework.SensoricDevice">
-    <Position X="32" Y="11.5" Width="2" />
+    <Position X="73.75" Y="5.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAQBAAAAAAAAAAABAAAAAAAAECAAAAEA=</HashCode>
       <FileName>Assets\sensoricFramework\Scripts\DeviceImplementation\SensoricDevice.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SensoricFramework.BHapticsEventArgs">
-    <Position X="23.25" Y="15.75" Width="2" />
+    <Position X="49.75" Y="20.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\sensoricFramework\Scripts\EventArgs\BHapticsEventArgs.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SensoricFramework.CiliaEventArgs">
-    <Position X="20.75" Y="15.75" Width="1.5" />
+    <Position X="47.25" Y="20.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAACA=</HashCode>
       <FileName>Assets\sensoricFramework\Scripts\EventArgs\CiliaEventArgs.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SensoricFramework.PlayOlfactoryEventArgs">
-    <Position X="20.5" Y="13.75" Width="2" />
+    <Position X="47" Y="18.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
       <FileName>Assets\sensoricFramework\Scripts\EventArgs\PlayOlfactoryEventArgs.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SensoricFramework.PlayTactileEventArgs">
-    <Position X="23.25" Y="13.75" Width="1.75" />
+    <Position X="49.75" Y="18.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
       <FileName>Assets\sensoricFramework\Scripts\EventArgs\PlayTactileEventArgs.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SensoricFramework.PlayThermalEventArgs">
-    <Position X="17.75" Y="13.75" Width="2" />
+    <Position X="44.25" Y="18.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\sensoricFramework\Scripts\EventArgs\PlayThermalEventArgs.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SensoricFramework.SensoricEventArgs">
-    <Position X="20.5" Y="11.5" Width="2" />
+    <Position X="47" Y="16.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\sensoricFramework\Scripts\EventArgs\SensoricEventArgs.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SensoricFramework.LinearIncreaseByDistanceModifier">
-    <Position X="17.5" Y="19.75" Width="5.75" />
+    <Position X="46" Y="7.75" Width="5.75" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
       <FileName>Assets\sensoricFramework\Scripts\Modifier\LinearIncreaseByDistanceModifier.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SensoricFramework.SensoricSenderModifier">
-    <Position X="17.5" Y="17.5" Width="5.75" />
+    <Position X="46" Y="5.75" Width="5.75" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\sensoricFramework\Scripts\Modifier\SensoricSenderModifier.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SensoricFramework.BHapticsSender">
-    <Position X="23.5" Y="9.25" Width="4.75" />
+    <Position X="58" Y="13.75" Width="4.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAgAAAAAAAAAA=</HashCode>
       <FileName>Assets\sensoricFramework\Scripts\Sender\BHapticsSender.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SensoricFramework.CiliaSender">
-    <Position X="18" Y="8.75" Width="4.75" />
+    <Position X="52.5" Y="13" Width="4.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAIAAAAAgAAAAAAAACA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAgAAAAAEAACA=</HashCode>
       <FileName>Assets\sensoricFramework\Scripts\Sender\CiliaSender.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SensoricFramework.OlfactorySender">
-    <Position X="18" Y="6.25" Width="4.75" />
+    <Position X="52.5" Y="10.5" Width="4.25" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAAAAAAA=</HashCode>
       <FileName>Assets\sensoricFramework\Scripts\Sender\OlfactorySender.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SensoricFramework.SensoricSender">
-    <Position X="23.25" Y="1.5" Width="5.5" />
+    <Position X="57.5" Y="5.75" Width="5.5" />
     <TypeIdentifier>
       <HashCode>BAAAIAQAAAAAABAQAAEIAAAAAAQAAIAMwAAAAAAAAEA=</HashCode>
       <FileName>Assets\sensoricFramework\Scripts\Sender\SensoricSender.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SensoricFramework.TactileSender">
-    <Position X="23.5" Y="6.25" Width="4.75" />
+    <Position X="57.5" Y="10.5" Width="5.5" />
     <TypeIdentifier>
-      <HashCode>CAAAIAAAAAAgAAAAAAAAAAAAAAgAAAAAgAAAAAAAAAA=</HashCode>
+      <HashCode>CAAAIAAAAQAABAAAAAAAAAAAQAAAAAAAgAAAAAAAAAA=</HashCode>
       <FileName>Assets\sensoricFramework\Scripts\Sender\TactileSender.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SensoricFramework.ThermalSender">
-    <Position X="29" Y="6.25" Width="4.75" />
+    <Position X="63.75" Y="10.5" Width="4.25" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAIAAAAA=</HashCode>
       <FileName>Assets\sensoricFramework\Scripts\Sender\ThermalSender.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SensoricFramework.SensoricManager" Collapsed="true">
-    <Position X="40" Y="1.5" Width="1.5" />
+  <Class Name="SensoricFramework.SensoricManager">
+    <Position X="81.5" Y="5.75" Width="4.75" />
     <TypeIdentifier>
       <HashCode>AAIAAACgAAAAAAAAAAEABAAAAABAQoAAQAAAhAAAAEA=</HashCode>
       <FileName>Assets\sensoricFramework\Scripts\SensoricManager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SensoricFramework.SensoricReceiver" Collapsed="true">
-    <Position X="41.75" Y="1.5" Width="1.5" />
+  <Class Name="SensoricFramework.SensoricReceiver">
+    <Position X="87" Y="5.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAAAAAAAAEAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\sensoricFramework\Scripts\SensoricReceiver.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Struct Name="SensoricFramework.OlfactoryStruct" Collapsed="true">
-    <Position X="40" Y="2.75" Width="1.5" />
+  <Struct Name="SensoricFramework.OlfactoryData" Collapsed="true">
+    <Position X="89.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\sensoricFramework\Scripts\Struct\OlfactoryStruct.cs</FileName>
+      <FileName>Assets\sensoricFramework\Scripts\Struct\OlfactoryData.cs</FileName>
     </TypeIdentifier>
   </Struct>
-  <Struct Name="SensoricFramework.SensoricStruct" Collapsed="true">
-    <Position X="41.75" Y="2.75" Width="1.5" />
+  <Struct Name="SensoricFramework.SensoricData" Collapsed="true">
+    <Position X="91.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAIAAAAAAAAAAAAAAAAAAAAACAAAAAAEAAAAAgA=</HashCode>
-      <FileName>Assets\sensoricFramework\Scripts\Struct\SensoricStruct.cs</FileName>
+      <FileName>Assets\sensoricFramework\Scripts\Struct\SensoricData.cs</FileName>
     </TypeIdentifier>
   </Struct>
-  <Struct Name="SensoricFramework.TactileStruct" Collapsed="true">
-    <Position X="43.5" Y="2.75" Width="1.5" />
+  <Struct Name="SensoricFramework.TactileData" Collapsed="true">
+    <Position X="93.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\sensoricFramework\Scripts\Struct\TactileStruct.cs</FileName>
+      <FileName>Assets\sensoricFramework\Scripts\Struct\TactileData.cs</FileName>
     </TypeIdentifier>
   </Struct>
-  <Struct Name="SensoricFramework.ThermalStruct" Collapsed="true">
-    <Position X="40" Y="3.75" Width="1.5" />
+  <Struct Name="SensoricFramework.ThermalData" Collapsed="true">
+    <Position X="89.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\sensoricFramework\Scripts\Struct\ThermalStruct.cs</FileName>
+      <FileName>Assets\sensoricFramework\Scripts\Struct\ThermalData.cs</FileName>
     </TypeIdentifier>
   </Struct>
-  <Enum Name="SensoricFramework.ExecutionAmountEnum" Collapsed="true">
-    <Position X="40" Y="5" Width="1.5" />
+  <Enum Name="SensoricFramework.ExecutionAmount" Collapsed="true">
+    <Position X="89.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAQAQAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\sensoricFramework\Scripts\Enum\ExecutionAmountEnum.cs</FileName>
+      <FileName>Assets\sensoricFramework\Scripts\Enum\ExecutionAmount.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="SensoricFramework.PositionEnum" Collapsed="true">
-    <Position X="41.75" Y="5" Width="1.5" />
+  <Enum Name="SensoricFramework.Position" Collapsed="true">
+    <Position X="91.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQAAAAAAAIAKAAAQAgAAKEQAAAAEAAAAAQAAAAAAA=</HashCode>
-      <FileName>Assets\sensoricFramework\Scripts\Enum\PositionEnum.cs</FileName>
+      <HashCode>AAAQAAAAAgAIAKAAAQAgAAKEQAAAAEAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\sensoricFramework\Scripts\Enum\Position.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="SensoricFramework.SensoricEnum" Collapsed="true">
-    <Position X="43.5" Y="5" Width="1.5" />
+  <Enum Name="SensoricFramework.Sensoric" Collapsed="true">
+    <Position X="93.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAQACAAAAAAAAAAAAEAAAAAAAAIA=</HashCode>
-      <FileName>Assets\sensoricFramework\Scripts\Enum\SensoricEnum.cs</FileName>
+      <FileName>Assets\sensoricFramework\Scripts\Enum\Sensoric.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="SensoricFramework.SmellEnum" Collapsed="true">
-    <Position X="40" Y="5.75" Width="1.5" />
+  <Enum Name="SensoricFramework.Smell" Collapsed="true">
+    <Position X="89.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAAAAABEAEAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\sensoricFramework\Scripts\Enum\SmellEnum.cs</FileName>
+      <FileName>Assets\sensoricFramework\Scripts\Enum\Smell.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="SensoricFramework.ThermalEnum" Collapsed="true">
-    <Position X="41.75" Y="5.75" Width="1.5" />
+  <Enum Name="SensoricFramework.Thermal" Collapsed="true">
+    <Position X="91.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAQAAgAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\sensoricFramework\Scripts\Enum\ThermalEnum.cs</FileName>
+      <FileName>Assets\sensoricFramework\Scripts\Enum\Thermal.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

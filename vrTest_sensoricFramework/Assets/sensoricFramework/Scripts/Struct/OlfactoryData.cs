@@ -7,13 +7,13 @@ namespace SensoricFramework
     /// Holds all olfactory information
     /// </summary>
     [System.Serializable]
-    public struct OlfactoryStruct
+    public struct OlfactoryData
     {
         /// <summary>
         /// <c>[SerializeField]</c>
         /// defines the smell
         /// </summary>
         [SerializeField]
-        public SmellEnum smell;
+        public Smell smell;
     }
 }

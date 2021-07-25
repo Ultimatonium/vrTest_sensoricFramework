@@ -8,6 +8,6 @@ namespace SensoricFramework
         /// <summary>
         /// struct which holds all olfactory information
         /// </summary>
-        public OlfactoryStruct olfactory;
+        public OlfactoryData olfactory;
     }
 }

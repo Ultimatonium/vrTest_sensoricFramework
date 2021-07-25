@@ -20,7 +20,8 @@ namespace SensoricFramework
         /// </summary>
         /// <param name="position">defines which body party got hit</param>
         /// <param name="collisionPoint"><see cref="Vector3"/>worldspace position where the Collider got hit</param>
-        protected override void Play(PositionEnum position, Vector3 collisionPoint, Collider other)
+        /// <param name="other"><see cref="TactileSender"/>t</param>
+        protected override void Play(Position position, Vector3 collisionPoint, Collider other)
         {
             ReplaceWithCollisionPoint(collisionPoint, other);
             SensoricManager.Instance.OnPlayTactile(this, new BHapticsEventArgs { position = position, sensoric = sensoricStruct, tactile = tactileStruct, hapticClip = bHapticClip });

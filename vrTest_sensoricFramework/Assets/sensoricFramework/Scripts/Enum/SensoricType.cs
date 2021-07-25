@@ -3,7 +3,7 @@ namespace SensoricFramework
     /// <summary>
     /// enum for available sensoric types
     /// </summary>
-    public enum SensoricEnum
+    public enum SensoricType
     {
         NONE,
         tactile,

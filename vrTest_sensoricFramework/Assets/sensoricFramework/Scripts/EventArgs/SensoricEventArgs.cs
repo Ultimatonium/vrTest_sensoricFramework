@@ -10,10 +10,10 @@ namespace SensoricFramework
         /// <summary>
         /// holds body part position
         /// </summary>
-        public PositionEnum position;
+        public Position position;
         /// <summary>
         /// holds generic sensoric information
         /// </summary>
-        public SensoricStruct sensoric;
+        public SensoricData sensoric;
     }
 }
